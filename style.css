@@ -116,7 +116,7 @@ body{background-color: #efefef;font-family:"Open Sans";}
 /*twitter-section end*/
 
 /*skills start*/
-.content .skills .skills-content{background: #fff;padding: 30px 40px;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);;
+.content .skills .skills-content{background: #fff;padding: 30px 40px;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
                                 }
 .content .skills .skills-content li {float: left;display: inline-block;width: 50%;box-sizing: border-box;padding-right: 30px;padding-bottom: 30px;}   
 .content .skills .skills-content li>.title{font-size:14px;color:#3d4451;font-weight: 400;margin-bottom: 2px;}
@@ -131,9 +131,30 @@ body{background-color: #efefef;font-family:"Open Sans";}
 							padding:0 20px;position: relative;cursor: pointer;}
 .content .portfolio .nav li:first-child{padding-left:0;}
 .content .portfolio .nav li:last-child{padding-right:0;}
-.content .portfolio .nav li:after{content: "";position:absolute;height: 5px;width:100%;background: #fff;
-								  bottom:-15px;left:0;}
-.content .portfolio .nav li.active:after{background: #e8676b;border-radius: 5px;}
+.content .portfolio .nav li:after{content: "";position:absolute;height: 5px;width: 0;background: #fff;
+								  bottom:-15px;left:0;transition:all 0.8s;}
+.content .portfolio .nav li.active:after{background: #e8676b;border-radius: 5px;width:100%}
+.content .portfolio .article{margin-top: 30px;
+	                         display: grid;
+	                         grid-template-rows: repeat(2,auto);
+	                         grid-template-columns: repeat(3,33.33%);
+	                         grid-auto-flow: row dense;
+	                         }
+.content .portfolio .article .pf-grid{padding: 0 10px;margin-bottom: 20px;}
+.content .portfolio .article .pf-grid-item-1{grid-row-start: 1;grid-row-end: 3;
+									       grid-column-start: 1;grid-column-end: 3;	}	  
+.content .portfolio .article .item-1{background: url(img/1.jpg);}
+.content .portfolio .article .item-2{background: url(img/2.jpg);}	
+.content .portfolio .article .item-3{background: url(img/3.jpg);}	
+.content .portfolio .article .pf-item{  
+                                    padding-top: 95%;
+                                    overflow: hidden; 
+                                    background-position: center;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)
+                                   }  
+                      
 /*portfolio end*/
 
 
