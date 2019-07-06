@@ -52,7 +52,7 @@ body{background-color: #efefef;font-family:"Open Sans";}
 /*信息卡片 main  start*/
 .content .user-card{height: 530px;background: #fff;
 	       box-sizing: border-box;margin-top:-340px;
-	       box-shadow: 0px 0px 2px 0px rgba(0,0,0,.45);}
+	       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);}
 .content .user-card .card-main{padding: 50px 50px 0; }
 .content .user-card .card-main .card-photo{float:left;width: 40%;}
 .content .user-card .card-main .card-photo img{width: 100%;}
@@ -96,17 +96,16 @@ body{background-color: #efefef;font-family:"Open Sans";}
 	                   margin-right: auto;margin-left:auto;height: 60px;line-height:60px;
                        border: 1px solid rgb(203, 205, 207); text-align: center;
                      }
-.content .download a:hover{box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)}
+.content .download a:hover{box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
 /*download end*/
 
 .content .introduction{font-size:20px; font-weight: 300;text-align: center;
                       line-height: 36px;margin-top:22px;}
 
+.content section>h2{font-size: 34px;font-weight:600;text-align:center;color: #3d4451;
+					margin-bottom: 10px;margin-top: 50px;		}
 /*twitter-section start*/
-.content .twitter-section{margin-top: 70px;}
-.content .twitter-section h2{font-size: 34px;font-weight:600;text-align:center;color: #3d4451;
-							}
-.content .twitter-section .twitter-icon{margin:0 auto;margin-top:10px;border:1px solid rgb(203, 205, 207);width: 70px;height: 70px;color:#e8676b;text-align: center;line-height: 70px;}
+.content .twitter-section .twitter-icon{border-radius: 2px;margin:0 auto;border:1px solid rgb(203, 205, 207);width: 68px;height: 68px;color:#e8676b;text-align: center;line-height: 70px;}
 .content .twitter-section .twitter-icon i{font-size: 30px;}
 .content .twitter-section .carousel-wrap{height: 158px; margin-top: 20px;}
 .content .twitter-section .carousel-wrap .tweet-text{ margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center;}
@@ -114,8 +113,29 @@ body{background-color: #efefef;font-family:"Open Sans";}
 .content .twitter-section .carousel-wrap .tweet-text a{color:rgb(232, 103, 107);}
 .content .twitter-section .carousel-wrap .tweet-details{margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center}
 .content .twitter-section .carousel-wrap .tweet-details a{color: #a2a2a2;}
-
 /*twitter-section end*/
+
+/*skills start*/
+.content .skills .skills-content{background: #fff;padding: 30px 40px;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);;
+                                }
+.content .skills .skills-content li {float: left;display: inline-block;width: 50%;box-sizing: border-box;padding-right: 30px;padding-bottom: 30px;}   
+.content .skills .skills-content li>.title{font-size:14px;color:#3d4451;font-weight: 400;margin-bottom: 2px;}
+.content .skills .skills-content li .progress{border-radius: 5px;position:relative;width: 100%;background: #fae1e1;height: 5px;}
+.content .skills .skills-content li .progress-fill{border-radius: 5px;position:absolute;width: 80%;height: 5px;background: #e8676b}
+/*skills end*/
+
+/*portfolio start*/
+.content .portfolio .nav{text-align: center;}
+.content .portfolio .nav ul{display: inline-block;}
+.content .portfolio .nav li{float: left;font-size: 13px;font-weight: 600;
+							padding:0 20px;position: relative;cursor: pointer;}
+.content .portfolio .nav li:first-child{padding-left:0;}
+.content .portfolio .nav li:last-child{padding-right:0;}
+.content .portfolio .nav li:after{content: "";position:absolute;height: 5px;width:100%;background: #fff;
+								  bottom:-15px;left:0;}
+.content .portfolio .nav li.active:after{background: #e8676b;border-radius: 5px;}
+/*portfolio end*/
+
 
 /*other item start*/
 .setting{position:fixed;left:0;top:100px;width: 56px;height: 60px;background-color: #fff;text-align: center;
