@@ -106,8 +106,15 @@ body{background-color: #efefef;font-family:"Open Sans";}
 .content .twitter-section{margin-top: 70px;}
 .content .twitter-section h2{font-size: 34px;font-weight:600;text-align:center;color: #3d4451;
 							}
-.content .twitter-section .twitter-icon{margin:0 auto;width: 70px;height: 70px;color:#e8676b;text-align: center;line-height: 70px;}
+.content .twitter-section .twitter-icon{margin:0 auto;margin-top:10px;border:1px solid rgb(203, 205, 207);width: 70px;height: 70px;color:#e8676b;text-align: center;line-height: 70px;}
 .content .twitter-section .twitter-icon i{font-size: 30px;}
+.content .twitter-section .carousel-wrap{height: 158px; margin-top: 20px;}
+.content .twitter-section .carousel-wrap .tweet-text{ margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center;}
+.content .twitter-section .carousel-wrap .tweet-text img{width: 20px;height: 20px;}
+.content .twitter-section .carousel-wrap .tweet-text a{color:rgb(232, 103, 107);}
+.content .twitter-section .carousel-wrap .tweet-details{margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center}
+.content .twitter-section .carousel-wrap .tweet-details a{color: #a2a2a2;}
+
 /*twitter-section end*/
 
 /*other item start*/

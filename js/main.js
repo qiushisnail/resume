@@ -25,5 +25,8 @@ window.onload  = function(){
 			}
 		}
 	}
+
+	//开启twitter轮播图
+	zqs.carousel();
 	
 }

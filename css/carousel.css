@@ -1,0 +1,31 @@
+.carousel-wrap{
+	position: relative;
+	overflow: hidden;
+}
+.carousel-wrap .list{
+	
+	position: absolute;
+	
+}
+.carousel-wrap .list>li{
+	float:left;
+}
+.carousel-wrap .points-wrap {
+	position: absolute;
+	bottom: 10px;
+	left:50%;
+}
+.carousel-wrap .points-wrap>a{
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
+	border: 5px solid rgb(209, 211, 210);
+	border-radius: 50%;
+	margin-right: 15px;
+}
+.carousel-wrap .points-wrap>a:hover{
+	border-color: rgb(232, 103, 107);
+}
+.carousel-wrap .points-wrap>a.active{
+	border-color: rgb(232, 103, 107);
+}
