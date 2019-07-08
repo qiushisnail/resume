@@ -1,3 +1,6 @@
+setTimeout(function(){
+  siteWelcome.classList.remove('active');
+},2000)
 window.onload  = function(){
 
     //获取头部元素 
