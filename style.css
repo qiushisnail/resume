@@ -8,6 +8,29 @@ h1,h2{font-style: normal;}
 /*CSS reset end*/
 
 body{background-color: #efefef;font-family:"Open Sans";}
+.show{display: block;}
+.hide{display: none;}
+.desktop .animate-up.animated {
+    opacity: 1;
+    visibility: visible;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+    -moz-transition: -moz-transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+    transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+
+.desktop .animate-up {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate(0, 100px);
+    -moz-transform: translate(0, 100px);
+    transform: translate(0, 100px);
+}
 
 /*header start*/
 .header .header-wrap{padding: 0 14px;}
@@ -102,7 +125,7 @@ body{background-color: #efefef;font-family:"Open Sans";}
 .content .introduction{font-size:20px; font-weight: 300;text-align: center;
                       line-height: 36px;margin-top:22px;}
 
-.content section>h2{font-size: 34px;font-weight:600;text-align:center;color: #3d4451;
+.content section h2:first-child{font-size: 34px;font-weight:600;text-align:center;color: #3d4451;
 					margin-bottom: 10px;margin-top: 50px;		}
 /*twitter-section start*/
 .content .twitter-section .twitter-icon{border-radius: 2px;margin:0 auto;border:1px solid rgb(203, 205, 207);width: 68px;height: 68px;color:#e8676b;text-align: center;line-height: 70px;}
@@ -134,11 +157,11 @@ body{background-color: #efefef;font-family:"Open Sans";}
 .content .portfolio .nav li:after{content: "";position:absolute;height: 5px;width: 0;background: #fff;
 								  bottom:-15px;left:0;transition:all 0.8s;}
 .content .portfolio .nav li.active:after{background: #e8676b;border-radius: 5px;width:100%}
-.content .portfolio .article{margin-top: 30px;
+.content .portfolio .article{margin-top: 30px;position: relative;
 	                         display: grid;
 	                         grid-template-rows: repeat(2,auto);
 	                         grid-template-columns: repeat(3,33.33%);
-	                         grid-auto-flow: row dense;
+	                         grid-auto-flow: row;
 	                         }
 .content .portfolio .article .pf-grid{padding: 0 10px;margin-bottom: 20px;}
 .content .portfolio .article .pf-grid-item-1{grid-row-start: 1;grid-row-end: 3;
@@ -146,15 +169,42 @@ body{background-color: #efefef;font-family:"Open Sans";}
 .content .portfolio .article .item-1{background: url(img/1.jpg);}
 .content .portfolio .article .item-2{background: url(img/2.jpg);}	
 .content .portfolio .article .item-3{background: url(img/3.jpg);}	
-.content .portfolio .article .pf-item{  
-                                    padding-top: 95%;
-                                    overflow: hidden; 
-                                    background-position: center;
-                                    background-size: cover;
-                                    background-repeat: no-repeat;
+.content .portfolio .article .pf-item{position:relative;padding-top: 95%;overflow: hidden;background-position: center;
+                                    background-size: cover; background-repeat: no-repeat;
                                     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24)
-                                   }  
-                      
+                                   
+                                    }
+.content .portfolio .article .pf-item:before,
+.content .portfolio .article .pf-item:after{position:absolute;bottom:0;left:0;content:'';display:block;width:100%;}
+.content .portfolio .article .pf-item:before{height: 100%;background: rgba(0, 0, 0, 0.1);}
+.content .portfolio .article .pf-item:after{ height:75%;background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
+												    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
+												    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
+												    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);}
+.content .portfolio .article .pf-grid{transition: all 0.1s ease-out;}
+.content .portfolio .article .pf-grid .pf-item .info{z-index:3;position:absolute;color: #fff;bottom:10px;left:5%;transition: all 0.2s ease-in-out}  
+.content .portfolio .article .pf-grid .pf-item .info h2{text-transform: uppercase;color:#fff;}
+.content .portfolio .article .pf-grid .pf-item .info h2.title{font-size: 20px;}
+.content .portfolio .article .pf-grid .pf-item .info .cat{margin-top: 10px;margin-bottom:20px;font-size: 12px;color:#efefef;}
+.content .portfolio .article .pf-grid .pf-item .info>ul{position: absolute;bottom:0;}
+.content .portfolio .article .pf-grid .pf-item .info>ul>li{float:left;transform: translate(0, 100px);transition: all 0.2s ease-out;}
+.content .portfolio .article .pf-grid .pf-item .info>ul>li>a>i{display:block;color:#e8676b;width: 50px;height: 50px;text-align: center;
+															 box-sizing: border-box;line-height: 50px;font-weight: bold;font-size: 25px;
+															 border: 1px solid  rgba(255, 255, 255, 0.2);margin-right:10px;
+															 border-radius: 3px;cursor: pointer;z-index: 9;position: relative;
+															 }
+.content .portfolio .article .pf-grid .pf-item .info>ul>li:hover i{background-color:rgba(255, 255, 255, 0.1);}	
+.content .portfolio .article .pf-item:hover .info{padding-bottom: 50px;}															 		
+.content .portfolio .article .pf-item:hover .info>ul>li {transform: translate(0, 0);}  
+.content .portfolio .article .pf-item:hover .info>ul>li.zoom{transition-delay: 0.15s;}
+.content .portfolio .article .pf-item:hover .info>ul>li.eye{transition-delay: 0.24s;}
+.content .portfolio .article .pf-item:hover .info>ul>li.link{transition-delay: 0.33s;}
+
+/* .content .portfolio .article .pf-item:hover
+transition-delay: 0.05s; */
+/* .content .portfolio .article .pf-item:hover  */
+/* .content .portfolio .article .pf-grid .pf-item .group .enlarge{background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMzZweCcgaGVpZ2h0PSczNnB4JyB4bWxuc…Y2NjY2NjY2NjY2NjY2cycgcmVwZWF0Q291bnQ9J2luZGVmaW5pdGUnLz48L3JlY3Q+PC9zdmc+);} */
+/* .content .portfolio .article .pf-grid .pf-item .info h2{colo}    */                   
 /*portfolio end*/
 
 

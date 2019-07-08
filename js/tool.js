@@ -160,6 +160,14 @@
 		}
 	}
 
+	w.zqs.haveClass=function (node,className){
+		var reg=new RegExp("\\b"+className+"\\b");
+		if(reg.test(node.className)){
+			return true;
+		}
+		return false;
+	}
+
 	w.zqs.removeClass = function(node,className){
 		if(node.className){
 			var reg = new RegExp("\\b" + className+"\\b")
