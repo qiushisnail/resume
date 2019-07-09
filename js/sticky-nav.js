@@ -2,7 +2,6 @@
   /*固定头部*/
   //获取头部导航元素
 	var view = header.querySelector('.header-nav');
-
 	var controller = {
     view: null,
     init: function(view){
@@ -25,9 +24,6 @@
     deactive: function(){
       zqs.removeClass(this.view,'header-sticky');
     }
-
   }
-
   controller.init(view);
-	
 }.call()
