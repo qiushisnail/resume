@@ -20,13 +20,13 @@ section h2:first-child{font-size: 34px;font-weight:600;text-align:center;color: 
 
 /*开机动画 start*/
 .site-welcome{position: fixed;top:0;left:0;width:100%;height:100%;background: #888;z-index:3;
-overflow: hidden;display: none;}
+	overflow: hidden;display: none;}
 .site-welcome.active{display: block;}
 /*开机动画 end*/
 
 /*header start*/
 .header .header-nav .header-wrap{padding: 0 14px;}
-.header .header-nav{width: 100%;position: fixed; padding: 20px 0;transition: all 0.3s;}
+.header .header-nav{width: 100%;position: fixed; padding: 20px 0;transition: all 0.3s;z-index:3;}
 .header .logo{display:inline-block;vertical-align: middle;font-weight: bold;
 	color:rgb(154, 157, 162);font-size: 30px;padding:10px 0;line-height: 1;}
 .header .logo .rs{color:#e8676b;display: inline-block;margin-right: 6px;vertical-align: bottom;}
@@ -49,17 +49,16 @@ overflow: hidden;display: none;}
 .header .header-bg{background: url(img/header-bg.jpg); height: 516px;background-position: center center;
 	background-size: cover;}
 .header .header-bg .mask{background: rgba(0,0,0,0.75);height: 100%;}
-.header .header-nav.header-sticky{z-index:3;background: #fff;padding: 10px 0;
+.header .header-nav.header-sticky{background: #fff;padding: 10px 0;
 	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
 .header .header-nav.header-sticky .header-wrap .nav>ul>li>a{color:#3d4451;}
 .header .header-nav.header-sticky .header-wrap .nav .header-item>a{color:#3d4451;
 	font-weight:bold;border-color:#d1d1d1;width: 40px;height: 40px;line-height: 40px; }
 .header .header-nav.header-sticky .header-wrap .nav>ul{min-height: 40px;padding-top: 2px;}
 .header .header-nav.header-sticky .header-wrap .logo{padding:5px;}
-
 .header .header-nav .header-wrap .nav>ul>li>.submenu{position:absolute;background: #fff;
 	padding:10px 0;text-align: right;white-space: nowrap;box-shadow:0 0 8px rgba(0, 0, 0, 0.65);
-	z-index:4;right:0;display:none;animation: submenuSlide .3s ease-out;}
+	right:0;display:none;animation: submenuSlide .3s ease-out;}
 .header .header-nav .header-wrap .nav>ul>li:hover .submenu{display:block;}
 @keyframes submenuSlide{
 	0%{

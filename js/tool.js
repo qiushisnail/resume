@@ -24,7 +24,6 @@
 
 			var needAuto = carouselWrap.getAttribute('needAuto');
 			needAuto = needAuto==null?false:true;
-      console.log(needAuto);
 			//自动轮播
 			if(needAuto){
 				autoChange();
