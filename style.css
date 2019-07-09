@@ -3,8 +3,8 @@
 ol,ul,li{list-style: none;}
 a{text-decoration: none;background: transparent;color:#000;}
 .clearfix:before,.clearfix:after{content: '';clear: both;display: table}
-.clearfix{*zoom:1;}
-h1,h2{font-style: normal;}
+ .clearfix{*zoom:1;} 
+h1,h2{font-style: normal;} 
 /*CSS reset end*/
 
 body{background-color: #efefef;font-family:"Open Sans";}
