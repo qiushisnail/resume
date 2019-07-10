@@ -14,10 +14,15 @@
       var  view = this.view;
       for(let i = 0; i < view.length; i++ ){
         view[i].addEventListener('click',(ev)=>{
+          for(var j = 0; j < view.length; j++ ){ // 去除标记
+            zqs.removeClass(view[j].parentNode,'current-nav')
+          }
           ev = ev || event;
           //获取nav对应的元素
           var element = document.querySelector(view[i].getAttribute('href').trim());
           this.scrollToElement(element);
+          zqs.addClass(view[i].parentNode,'current-nav') // 标记当前点击的导航
+          zqs.addClass(view[i].parentNode,'active')
           ev.preventDefault();
         })
       }

@@ -16,6 +16,9 @@ section h2:first-child{font-size: 34px;font-weight:600;text-align:center;color: 
 .clearfix{*zoom:1;} 
 .show{display: block;}
 .hide{display: none;}
+/* .desktop .animate-up{opacity: 0;transform:translate(0,100px);visibility:hidden;}
+.desktop .animate-up.animated{opacity:1;transform:translate(0px,0px);visibility:visible;
+	transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;} */
 /*common css end*/
 
 /*开机动画 start*/
@@ -38,7 +41,8 @@ section h2:first-child{font-size: 34px;font-weight:600;text-align:center;color: 
 	color:rgba(255, 255, 255, 0.7);padding:12px 0;line-height: 1;}
 .header .header-nav .header-wrap .nav>ul>li>a:after{content: '';position: absolute;width:0;
 	left: 0;bottom:0;height: 3px;background:#e8676b;transition: width 0.3s;}     
-.header .header-nav .header-wrap .nav>ul>li:hover a:after{width:100%;}                                                
+.header .header-nav .header-wrap .nav>ul>li:hover a:after,
+.header .header-nav .header-wrap .nav>ul>li.active a:after{width:100%;}                                                
 .header .header-nav .header-wrap .nav .header-item{float: right; margin-left:30px; }
 .header .header-nav .header-wrap .nav .header-item>a{position: relative;display:inline-block;
 	vertical-align: middle;width: 50px;height: 50px;line-height: 50px;font-size:16px;color:#fff;
@@ -78,63 +82,63 @@ section h2:first-child{font-size: 34px;font-weight:600;text-align:center;color: 
 
 /*main start*/
 /*main 信息卡片 start*/
-main>.user-card{position:relative;height: 530px;background: #fff;margin-top:-340px;
+main .user-card{position:relative;height: 530px;background: #fff;margin-top:-340px;
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);}
-main>.user-card .card-main{padding: 50px 50px 0;}
-main>.user-card .card-main .card-photo{float:left;width: 40%;}
-main>.user-card .card-main .card-photo>img{width: 100%;}
-main>.user-card .card-main .card-info{float:right;width:60%;padding-left:60px;}
-main>.user-card .card-main .card-info .text{position: relative; border-bottom: 1px solid #dedede;}
-main>.user-card .card-main .card-info .text .hello{width: 70px;height: 30px;line-height:30px;
+main .user-card .card-main{padding: 50px 50px 0;}
+main .user-card .card-main .card-photo{float:left;width: 40%;}
+main .user-card .card-main .card-photo>img{width: 100%;}
+main .user-card .card-main .card-info{float:right;width:60%;padding-left:60px;}
+main .user-card .card-main .card-info .text{position: relative; border-bottom: 1px solid #dedede;}
+main .user-card .card-main .card-info .text .hello{width: 70px;height: 30px;line-height:30px;
 	background: #e8676b;color:#fff;font-size:14px;font-weight: bold;text-align: center;
 	margin-bottom: 26px;border-radius: 3px;}
-main>.user-card .card-main .card-info .text .hello:after{ content: '';width:0;height:0;
+main .user-card .card-main .card-info .text .hello:after{ content: '';width:0;height:0;
 	border-right:5px solid transparent;border-bottom:5px solid transparent;
 	border-left:5px solid #e8676b;border-top:5px solid #e8676b;
 	position: absolute;top:30px;left:8px;}
-main>.user-card .card-main .card-info .text h1 span{font-weight: 300;}
-main>.user-card .card-main .card-info .text h2{font-size:18px;font-weight:400;margin: 3px 0 24px;}
-main>.user-card .card-main .card-info ul{margin-top:30px;}
-main>.user-card .card-main .card-info ul li {float:left;width:30%;font-weight: bold;font-size:12px;
+main .user-card .card-main .card-info .text h1 span{font-weight: 300;}
+main .user-card .card-main .card-info .text h2{font-size:18px;font-weight:400;margin: 3px 0 24px;}
+main .user-card .card-main .card-info ul{margin-top:30px;}
+main .user-card .card-main .card-info ul li {float:left;width:30%;font-weight: bold;font-size:12px;
 	margin-bottom: 15px;}
-main>.user-card .card-main .card-info ul li:nth-child(even) {width:70%;color:#9da0a7;
+main .user-card .card-main .card-info ul li:nth-child(even) {width:70%;color:#9da0a7;
 	font-weight: normal;font-size:15px;}
-main>.user-card .card-main .card-info ul .vacation span{background: #e8676b;color:#fff;
+main .user-card .card-main .card-info ul .vacation span{background: #e8676b;color:#fff;
 	padding: 2px 8px;}
-main>.user-card .card-main .card-info ul li:last-child i {font-size: 15px; padding-right: 5px;}
-main>.user-card .footer{position:absolute;bottom:0;left:0;width:100%;background: #e8676b;
+main .user-card .card-main .card-info ul li:last-child i {font-size: 15px; padding-right: 5px;}
+main .user-card .footer{position:absolute;bottom:0;left:0;width:100%;background: #e8676b;
 	text-align:center;padding: 15px 0;}
-main>.user-card .footer a{width: 45px;height: 45px;display:inline-block;border-radius: 50%;
+main .user-card .footer a{width: 45px;height: 45px;display:inline-block;border-radius: 50%;
 	line-height: 45px; text-align: center;}
-main>.user-card .footer a i{font-size: 20px;color:#fff;}
-main>.user-card .footer a:hover{background: #D05C60;}
+main .user-card .footer a i{font-size: 20px;color:#fff;}
+main .user-card .footer a:hover{background: #D05C60;}
 
 /* main 信息卡片   end*/
 
 /*main download start*/
-main>.download {margin-top: 35px;}
-main>.download a{font-weight: bold;color:#464d59;width: 278px;height: 60px;line-height:60px;
+main .download {margin-top: 35px;}
+main .download a{font-weight: bold;color:#464d59;width: 278px;height: 60px;line-height:60px;
 	text-align: center;border: 1px solid rgb(203, 205, 207); margin:0 auto;}
-main>.download a:hover{box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
+main .download a:hover{box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);}
 /*main download end*/
 
 /*main introduction start*/
-main>.introduction{font-size:20px; font-weight: 300;text-align: center;line-height: 36px;margin-top:22px;}
+main .introduction{font-size:20px; font-weight: 300;text-align: center;line-height: 36px;margin-top:22px;}
 /*main introduction end*/
 
-/*main twitter-section start*/
-main>.twitter .twitter-icon{border-radius: 2px;margin:0 auto;border:1px solid rgb(203, 205, 207);
-	width: 70px;height: 70px;color:#e8676b;text-align: center;line-height: 70px;}
-main>.twitter .twitter-icon i{font-size: 30px;}
-main>.twitter .carousel-wrap{height: 158px; margin-top: 20px;}
-main>.twitter .carousel-wrap .twitter-text{ margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center;}
-main>.twitter .carousel-wrap .twitter-text img{display:inline-block;width: 20px;height: 20px;}
-main>.twitter .carousel-wrap .twitter-text a{display:inline-block;color:rgb(232, 103, 107);}
-main>.twitter .carousel-wrap .twitter-details{margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center}
-main>.twitter .carousel-wrap .twitter-details a{color: #a2a2a2;}
-/*main twitter-section end*/
-
 /*main end*/
+
+/*main twitter-section start*/
+.twitter .twitter-icon{border-radius: 2px;margin:0 auto;border:1px solid rgb(203, 205, 207);
+	width: 70px;height: 70px;color:#e8676b;text-align: center;line-height: 70px;}
+.twitter .twitter-icon i{font-size: 30px;}
+.twitter .carousel-wrap{height: 158px; margin-top: 20px;}
+.twitter .carousel-wrap .twitter-text{ margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center;}
+.twitter .carousel-wrap .twitter-text img{display:inline-block;width: 20px;height: 20px;}
+.twitter .carousel-wrap .twitter-text a{display:inline-block;color:rgb(232, 103, 107);}
+.twitter .carousel-wrap .twitter-details{margin: 0 0 25px 0;font-size:20px;font-weight: 300;text-align: center}
+.twitter .carousel-wrap .twitter-details a{color: #a2a2a2;}
+/*main twitter-section end*/
 
 /*skills start*/
 section.skills .skills-content{background: #fff;padding: 30px 40px;
