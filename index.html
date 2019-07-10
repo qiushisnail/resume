@@ -20,9 +20,9 @@
 			<div class='header-wrap clearfix'>		
 			  <div class='nav clearfix'>		
 					<ul class="clearfix">
-						<li><a href="#">ABOUT</a></li>
-						<li><a href="#">SKILLS</a></li>
-						<li><a href="#">PORTFOLIO</a></li>
+						<li><a href="#about" class='valid'>ABOUT</a></li>
+						<li><a href="#skills" class='valid'>SKILLS</a></li>
+						<li><a href="#portfolio" class='valid'>PORTFOLIO</a></li>
 						<li>
 							<a href="javascript:;">EXPERIENCE</a>
 							<ul class="submenu">
@@ -73,7 +73,7 @@
 	<!-- 头部代码 end-->
 
 	<!--主体内容 start-->
-	<main >
+	<main id='about' data-nav>
 		<!-- 信息卡片 user-card  start--> 
 		<div class="user-card">
 			<div class="card-main clearfix">
@@ -204,7 +204,7 @@
 	<!--主体内容 start-->
 	
 	<!--skills start-->
-	<section class="skills">
+	<section id='skills' data-nav class="skills">
 		<h2>Professional Skills</h2>
 		<div class="skills-content">
 			<ul class="clearfix">
@@ -250,7 +250,7 @@
 	<!--skills end-->
 	
 	<!--portfolio start-->
-	<section class="portfolio">
+	<section id='portfolio' data-nav class="portfolio">
 		<h2>Portfolio</h2>
 		<div class="nav">
 			<ul class='clearfix'>
@@ -309,9 +309,10 @@
 	<!-- <div class="setting"><i class="iconfont icon-setting"></i></div>
 	<div class="awwwards"><a href="http://baidu.com" target="_blank"></a></div> -->
 
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 	<script type="text/javascript" src="js/tool.js"></script>
 	<script type="text/javascript" src="js/sticky-nav.js"></script>
+	<script type="text/javascript" src="js/smoothy-nav.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

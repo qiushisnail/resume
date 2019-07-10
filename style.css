@@ -204,7 +204,6 @@ section.portfolio .article .pf-item:hover .info>ul>li.eye{transition-delay: 0.24
 section.portfolio .article .pf-item:hover .info>ul>li.link{transition-delay: 0.33s;}
 /*portfolio end*/
 
-
 /*other item start*/
 .setting{position:fixed;left:0;top:100px;width: 56px;height: 60px;background-color: #fff;
 	text-align: center;line-height: 60px;z-index:1;border-radius:2px;}
