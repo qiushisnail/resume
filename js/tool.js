@@ -152,9 +152,7 @@
 	}
 
 	w.zqs.addClass = function(node,className){
-		
-		var reg = new RegExp("\\b" + className+"\\b")
-		if(!reg.test(node.className)){
+		if(!zqs.haveClass(node,className)){
 			node.className += (' '+className);
 		}
 	}

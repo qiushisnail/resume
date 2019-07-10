@@ -16,9 +16,9 @@ section h2:first-child{font-size: 34px;font-weight:600;text-align:center;color: 
 .clearfix{*zoom:1;} 
 .show{display: block;}
 .hide{display: none;}
-/* .desktop .animate-up{opacity: 0;transform:translate(0,100px);visibility:hidden;}
+.desktop .animate-up{opacity: 0;transform:translate(0,100px);visibility:hidden;}
 .desktop .animate-up.animated{opacity:1;transform:translate(0px,0px);visibility:visible;
-	transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;} */
+	transition: transform 400ms ease-out 200ms, opacity 400ms ease-out 200ms;} 
 /*common css end*/
 
 /*开机动画 start*/
@@ -150,7 +150,7 @@ section.skills .skills-content li>.title{font-size:14px;color:#3d4451;font-weigh
 section.skills .skills-content li .progress{border-radius: 5px;position:relative;
 	width: 100%;background: #fae1e1;height: 5px;}
 section.skills .skills-content li .progress-fill{border-radius: 5px;position:absolute;
-	width: 80%;height: 5px;background: #e8676b}
+	height: 5px;background: #e8676b;width:0;transition:all 0.3 ease;}
 /*skills end*/
 
 /*portfolio start*/

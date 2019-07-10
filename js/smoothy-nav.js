@@ -23,6 +23,9 @@
           this.scrollToElement(element);
           zqs.addClass(view[i].parentNode,'current-nav') // 标记当前点击的导航
           zqs.addClass(view[i].parentNode,'active')
+          // setTimeout(function(){
+          //   zqs.removeClass(view[i].parentNode,'current-nav') // 标记当前点击的导航
+          // })
           ev.preventDefault();
         })
       }

@@ -7,14 +7,11 @@
     init: function(view){
       this.view = view;
       this.bindEvents();
+      this.scrollFn()
     },
     bindEvents: function(){
       window.addEventListener('scroll',()=>{
-        if(window.scrollY>0){
-          this.active();
-        }else{
-          this.deactive();
-        }
+        this.scrollFn()
       },false);
       
     },
@@ -23,6 +20,13 @@
     },
     deactive: function(){
       zqs.removeClass(this.view,'header-sticky');
+    },
+    scrollFn: function(){
+      if(window.scrollY>0){
+        this.active();
+      }else{
+        this.deactive();
+      }
     }
   }
   controller.init(view);
